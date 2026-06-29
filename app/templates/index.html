@@ -1,0 +1,57 @@
+<html>
+<head><title>Salary predictor</title></head>
+
+<body>
+    <h1>Developer Salary Predictor</h1>
+    <form  method ="POST" action  = "/predict"> 
+            <label>Country:</label><br>
+            <select name = "country">
+                <option> United States of America</option>
+                <option>United Kingdom of Great  Britain and Northern Ireland</option>
+                <option>India</option>
+                <option>Other</option>
+                </select>
+
+                <label>Years of Experience:</label><br>
+                <input type = "number" name="years" value="5" min="0" max="40">
+                <br><br>
+
+                <label> Education Level:</label><br>
+                <select name="education">
+                <option>Bachelor's</option>
+                <option>Master's</option>
+                <option>PhD</option>
+                <option>Assoaciate's</option>
+                <option>Some collage</option>
+                <option>High School</option>
+                <option>No formal Education</option>
+                <option>Other</option>
+                </select>
+                <br><br>
+
+                <label>Employment Type</label><br>
+                <select name= "employment">
+                <option>Full-time</option>
+                <option>Part-time</option>
+                <option>Freelance/Self-employed</option>
+                <option>Student</option>
+                <option>Other</option>
+                </select>
+                <br><br>
+
+                <label> Number of programming Languages used: </label>
+                <input type="number" name="languages" value="4" min="1" max="20">
+                <br><br>
+
+
+            <button type = "submit">predict salary </button>
+
+    </form>
+    {% if salary %}
+    <hr>
+    <H2> Predicted salary: ${{salary}}</h2>
+    {% endif %}
+
+
+</body>
+</html>
